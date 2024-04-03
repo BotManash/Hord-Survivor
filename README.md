@@ -9,4 +9,3 @@ Hyper casual survival 2D game
 - Scene Transition using Async Method
 - Simple Weapon System using Raycast/Rigidbody2d
 - Heavily Implementation of third party designer assets
-- 
