@@ -41,3 +41,15 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: BackGround
+    uniqueID: 868078767
+    locked: 0
+  - name: Platform
+    uniqueID: 901070853
+    locked: 0
+  - name: Object
+    uniqueID: 1834830659
+    locked: 0
+  - name: Characters
+    uniqueID: 662621449
+    locked: 0
