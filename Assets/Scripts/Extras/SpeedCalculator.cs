@@ -1,29 +1,31 @@
 using System;
+using System.Collections;
 using UnityEngine;
 
 namespace Scripts.Global
 {
     public class SpeedCalculator : MonoBehaviour
     {
+        
+        [SerializeField] private bool calculateSpeed;
         public float speed;
-        private Vector2 _initialPos;
-        private Vector2 _finalPos;
 
         private void Start()
         {
-            _initialPos = Vector2.zero;
+            StartCoroutine(ECalculateSpeed());
         }
 
-        private void Update()
+        private IEnumerator ECalculateSpeed()
         {
-            _initialPos = transform.position;
-            speed = Vector3.Distance(_initialPos, _finalPos) / Time.deltaTime;
+            while (calculateSpeed)
+            {
+                var prevPos = transform.position;
+                yield return new WaitForFixedUpdate();
+                speed = Vector3.Distance(transform.position, prevPos) / Time.fixedDeltaTime;
+
+            }
         }
 
-        private void LateUpdate()
-        {
-            _finalPos = transform.position;
-        }
     }
 }
 
