@@ -53,13 +53,14 @@ MonoBehaviour:
     speed: 1
     damage: 0
     health: 0
-    attackSpeed: 0
+    attackRate: 80
   anim: {fileID: 8390885689134339385}
   detectionPoint: {fileID: 5621667140015161427}
   detectionRange: 1
   detectionMask:
     serializedVersion: 2
     m_Bits: 128
+  hitObject: {fileID: 6634859617619526009}
 --- !u!61 &1437547562790916945
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -130,7 +131,7 @@ Transform:
   m_GameObject: {fileID: 8260609645778338030}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.953, y: 0.813, z: 0}
+  m_LocalPosition: {x: -0.969, y: 1.258, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -319,6 +320,12 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3e196c9e632c76841a71cb6e2dc6d010, type: 3}
+--- !u!1 &6634859617619526009 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1967835574231978638, guid: 3e196c9e632c76841a71cb6e2dc6d010,
+    type: 3}
+  m_PrefabInstance: {fileID: 5142241799639831543}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &6634859617619526012 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1967835574231978635, guid: 3e196c9e632c76841a71cb6e2dc6d010,
