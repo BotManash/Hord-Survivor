@@ -11,3 +11,5 @@ U
 %Assets/Scripts/Weapon/SimpleWeapon.cs,f\e\febe230af4877fc9e34e3d8068f7adfc0800a7a5
 _
 /Assets/Scripts/Weapon/Extras/WeaponDetection.cs,9\a\9a54d3670131fa89a1ab76b4b383fddeb4ee25f7
+O
+Assets/Scripts/Weapon/Bullet.cs,6\d\6de8d71019e38c2d75acb79960a6874b35c9fede
