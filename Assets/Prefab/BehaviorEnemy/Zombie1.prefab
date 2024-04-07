@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5754785131898550841}
-  - component: {fileID: 1545729905035936851}
+  - component: {fileID: 1758358729062765672}
   - component: {fileID: 1437547562790916945}
   m_Layer: 6
   m_Name: Zombie1
@@ -36,7 +36,7 @@ Transform:
   - {fileID: 6634859617619526012}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1545729905035936851
+--- !u!114 &1758358729062765672
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -45,21 +45,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 2728385490050689109}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c4740254b765a9e49a625f378aa8e50f, type: 3}
+  m_Script: {fileID: 11500000, guid: b0a0633b35de9fd48ab487e1e24e9834, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   aiData:
-    Name: 
+    Name: Zombie
     speed: 1
     damage: 0
     health: 0
+    attackSpeed: 0
   anim: {fileID: 8390885689134339385}
   detectionPoint: {fileID: 5621667140015161427}
   detectionRange: 1
   detectionMask:
     serializedVersion: 2
     m_Bits: 128
-  hasDetected: 0
 --- !u!61 &1437547562790916945
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -130,7 +130,7 @@ Transform:
   m_GameObject: {fileID: 8260609645778338030}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.916, y: 0.98, z: 0}
+  m_LocalPosition: {x: -0.953, y: 0.813, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
