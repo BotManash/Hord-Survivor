@@ -11,6 +11,7 @@ namespace Scripts.Weapon
         [SerializeField] private WeaponDetection weaponDetection;
         [SerializeField] private UnityEvent onBulletFire;
         [SerializeField] private Bullet bullet;
+        [SerializeField] private Transform bulletPoint;
 
         private float _currentTime;
 
@@ -18,6 +19,11 @@ namespace Scripts.Weapon
         public SimpleWeapon(WeaponData weaponDataRef)
         {
             weaponData = weaponDataRef;
+        }
+
+        private void Start()
+        {
+            _currentTime = 60f / weaponData.fireRate;
         }
 
         private void Update()
@@ -32,12 +38,13 @@ namespace Scripts.Weapon
             {
                 return;
             }
+
             Shoot(() =>
             {
                 onBulletFire?.Invoke();
-                _currentTime = 0;
-            });
+            },weaponData.bulletSpeed);
             
+            _currentTime = 0;
         }
 
         private void GetCurrentFireRate()
@@ -48,10 +55,15 @@ namespace Scripts.Weapon
             }
         }
 
-        private void Shoot(Action callback)
+        private void Shoot(Action callback,int bulletSpeed)
         {
-            var tempBullet = Instantiate(bullet, null);
-            
+            var tempBullet = Instantiate(bullet, bulletPoint);
+            tempBullet.transform.position = bulletPoint.position;
+            tempBullet.transform.rotation=Quaternion.Euler(Vector2.zero);
+            tempBullet.transform.SetParent(null);
+            tempBullet.gameObject.SetActive(true);
+            tempBullet.Shoot(bulletSpeed);
+            callback?.Invoke();
         }
 
        
@@ -61,10 +73,8 @@ namespace Scripts.Weapon
     public class WeaponData
     {
         public int weaponId;
-        public int damage;
         public float fireRate;
-        public int numberOfShots;
-        public int speed;
+        public int bulletSpeed;
     }
 }
 
