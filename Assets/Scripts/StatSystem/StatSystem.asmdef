@@ -1,0 +1,27 @@
+{
+    "name": "StatSystem",
+    "rootNamespace": "Script.StatSystem",
+    "references": [
+        "GUID:fc938053c79e514488936401f1602599",
+        "GUID:0fb570f5a0d580849ad24e659090dbdd",
+        "GUID:7a80c10e7ba78ee4788f1f5c36a29571",
+        "GUID:776d03a35f1b52c4a9aed9f56d7b4229",
+        "GUID:f88fb04354076c646a4107a491394033",
+        "GUID:6055be8ebefd69e48b49212b09b47b2f",
+        "GUID:6546d7765b4165b40850b3667f981c26"
+    ],
+    "includePlatforms": [
+        "Android",
+        "Editor",
+        "WindowsStandalone32",
+        "WindowsStandalone64"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

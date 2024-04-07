@@ -20,6 +20,8 @@ namespace Scripts.AI.SuperClass
         protected int GetHitId = Animator.StringToHash("Hit");
         protected int AttackId = Animator.StringToHash("Attack");
 
+        private RaycastHit2D hit { get; set; }
+
         private float _currentRate=0f;
         private void FixedUpdate()
         {
@@ -35,7 +37,7 @@ namespace Scripts.AI.SuperClass
             {
                 return;
             }
-            Attack();
+            Attack(hit);
             hitObject.SetActive(true);
             _currentRate = 0f;
 
@@ -44,7 +46,7 @@ namespace Scripts.AI.SuperClass
         
         private bool HasDetect()
         {
-            return Physics2D.Raycast(transform.position, -Vector2.right, detectionRange, detectionMask);
+            return hit=Physics2D.Raycast(transform.position, -Vector2.right, detectionRange, detectionMask);
         }
         
         private void Move()
@@ -60,7 +62,7 @@ namespace Scripts.AI.SuperClass
             }
         }
 
-        protected abstract void Attack();
+        protected abstract void Attack(RaycastHit2D hit);
         
 
         private void OnDrawGizmos()

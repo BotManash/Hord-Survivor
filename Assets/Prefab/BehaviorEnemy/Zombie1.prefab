@@ -51,7 +51,7 @@ MonoBehaviour:
   aiData:
     Name: Zombie
     speed: 1
-    damage: 0
+    damage: 5
     health: 0
     attackRate: 80
   anim: {fileID: 8390885689134339385}
