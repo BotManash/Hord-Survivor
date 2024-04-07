@@ -17,3 +17,5 @@ _
 /Assets/sprite muzzle flashes/AnimatedTexture.cs,e\0\e0ed419d184a0314e5b2bb0632bb5f36487ba0f7
 M
 Assets/Scripts/AI/SimpleAI.cs,a\a\aa7648cfa580255f3f6ba825128d16f72eda9dbe
+_
+/Assets/Undead Survivor/Complete/Codes/Player.cs,a\c\ace10669b826222f261d084c0350178aad58a566
