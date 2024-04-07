@@ -13,3 +13,7 @@ _
 /Assets/Scripts/Weapon/Extras/WeaponDetection.cs,9\a\9a54d3670131fa89a1ab76b4b383fddeb4ee25f7
 O
 Assets/Scripts/Weapon/Bullet.cs,6\d\6de8d71019e38c2d75acb79960a6874b35c9fede
+_
+/Assets/sprite muzzle flashes/AnimatedTexture.cs,e\0\e0ed419d184a0314e5b2bb0632bb5f36487ba0f7
+M
+Assets/Scripts/AI/SimpleAI.cs,a\a\aa7648cfa580255f3f6ba825128d16f72eda9dbe
