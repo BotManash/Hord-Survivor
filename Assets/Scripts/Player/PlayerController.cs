@@ -27,8 +27,7 @@ namespace Scripts.Player
         {
 #if UNITY_EDITOR
             _dir = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")).normalized;
-#endif
-#if UNITY_ANDROID
+#elif UNITY_ANDROID
             _dir = new Vector2(variableJoystick.Horizontal, variableJoystick.Vertical).normalized;
 #endif
             
