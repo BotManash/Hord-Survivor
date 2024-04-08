@@ -53,34 +53,5 @@ namespace Scripts.StatSystem.SuperClass
         {
             SingleCallUpdateView();
         }
-
-        #region Test
-
-        
-        public void DecreaseCertainStat()
-        {
-            statModel.DecreaseStat(5f);
-        }
-        
-        public void IncreaseCertainStat()
-        {
-            statModel.IncreaseStat(5f);
-        }
-        
-        public void RestoreCertainStat()
-        {
-            statModel.RestoreStat();
-        }
-        
-        public void SetCertainMaxStat()
-        {
-            statModel.IncreaseMaxStat(30);
-        }
-        
-
-        #endregion
-        
-
-
     }
 }

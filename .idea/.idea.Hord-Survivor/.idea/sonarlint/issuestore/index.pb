@@ -27,11 +27,13 @@ k
 ;Assets/Scripts/StatSystem/Stats/StatPresenterOfImageView.cs,4\9\493f26081abbb8948512b829f6dbb410734af27a
 o
 ?Assets/Scripts/ObjectPoolSystem/SuperClass/ObjectPoolHandler.cs,e\3\e3d012cf2010e30c8117923a93958a7e06b9bc49
-R
-"Assets/Scripts/Global/Singleton.cs,f\5\f54aed49d45724c4b2a56ffe91e58f50d289cef1
-R
-"Assets/Scripts/Extras/Singleton.cs,f\1\f101f9d8aa7d3fb4948526d14cf28aea1fd3cbf5
 Y
 )Assets/Scripts/Extras/SingletonObjects.cs,d\9\d9b56ebf6b1e85ff8cd94fc5b8f6609cd26c98a1
-W
-'Assets/Scripts/Extras/SingletonClass.cs,f\8\f8361fc6a46eab25839952aeb350d122a69c6253
+h
+8Assets/Scripts/StatSystem/Stats/StatPresenterWithNoUI.cs,5\6\56bbd559761d987f29fb9bb066dc3b224682eee9
+]
+-Assets/Joystick Pack/Scripts/Base/Joystick.cs,a\e\ae9d02235155dd81c0e86a03e77d1440bc92a31a
+i
+9Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile Overlay.shader,b\8\b8f5789614c9ee2c85380eccebca00a36e795932
+Y
+)Assets/Scripts/Extras/GameStateHandler.cs,b\9\b9fc9ccb204f39cf5e0271ade3db27e31f4cfd57

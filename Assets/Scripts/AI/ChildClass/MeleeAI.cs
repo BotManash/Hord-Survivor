@@ -8,12 +8,28 @@ namespace Scripts.AI.ChildClass
     public class MeleeAI : SimpleAI
     {
         
-        protected override void Attack(RaycastHit2D hit)
+        [SerializeField] private GameObject hitObject;
+        protected override void AttackBehavior(RaycastHit2D hit)
         {
-            hit.collider.gameObject.GetComponent<StatManager>().GetStatPresenter("Health").DecreaseStat(aiData.damage);
+            hitObject.SetActive(HasDetect());
             Debug.Log("Attack");
         }
-        
+
+        protected override void DeadBehavior()
+        {
+            hitObject.SetActive(false);
+            Invoke(nameof(OnDead),1f);
+        }
+
+        protected override void NoDetectionBehavior()
+        {
+            hitObject.SetActive(false);
+        }
+
+        private void OnDead()
+        {
+            this.gameObject.SetActive(false);
+        }
     }
 }
 

@@ -1,4 +1,6 @@
 ﻿using System;
+using Scripts.Global;
+using Scripts.StatSystem.SuperClass;
 using UnityEngine;
 
 namespace Scripts.Weapon
@@ -11,6 +13,17 @@ namespace Scripts.Weapon
         public void Shoot(int bulletSpeed)
         {
             rb.AddForce(Vector2.right * bulletSpeed);
+        }
+
+        private void OnTriggerEnter2D(Collider2D other)
+        {
+            if (!other.CompareTag(ConstantKey.EnemyTag))
+            {
+                return;
+            }
+            other.GetComponent<StatManager>().GetStatPresenter("Health").
+                DecreaseStat(bulletData.bulletDamage);
+            Destroy(this.gameObject);
         }
     }
 
