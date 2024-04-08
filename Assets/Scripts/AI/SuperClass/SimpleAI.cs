@@ -1,6 +1,7 @@
 using System;
+using System.Collections;
+using Scripts.StatSystem.SuperClass;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 namespace Scripts.AI.SuperClass
 {
@@ -14,21 +15,64 @@ namespace Scripts.AI.SuperClass
         [SerializeField] protected float detectionRange;
         [SerializeField] protected LayerMask detectionMask;
         
-        [SerializeField] private GameObject hitObject;
         protected int WalkId = Animator.StringToHash("Walk");
-        protected int DieId = Animator.StringToHash("Dead");
+        private readonly int _dieId = Animator.StringToHash("Dead");
         protected int GetHitId = Animator.StringToHash("Hit");
-        protected int AttackId = Animator.StringToHash("Attack");
+        private readonly int _attackId = Animator.StringToHash("Attack");
 
+        [SerializeField] protected StatManager statManager;
         private RaycastHit2D hit { get; set; }
 
         private float _currentRate=0f;
-        private void FixedUpdate()
+        private bool _isDead;
+        private Coroutine _cBehaviourRoutine;
+
+        protected virtual void Start()
         {
+            if (_cBehaviourRoutine != null)
+            {
+                _cBehaviourRoutine = null;
+            }
+            else
+            {
+                _cBehaviourRoutine = StartCoroutine(ERunBehavior());
+            }
+           
+        }
+
+        protected virtual void OnDisable()
+        {
+            if (_cBehaviourRoutine != null)
+            {
+                StopCoroutine(_cBehaviourRoutine);
+                _cBehaviourRoutine = null;
+            }
+        }
+
+        private IEnumerator ERunBehavior()
+        {
+            while (!_isDead)
+            {
+                Behavior();
+                yield return new WaitForFixedUpdate();
+            }
+        }
+        
+        private void Behavior()
+        {
+            var currentStat = statManager.GetStatPresenter("Health").GetCurrentStat();
+            if ( currentStat<= 0f)
+            {
+                anim.SetBool(_dieId,true);
+                this.GetComponent<BoxCollider2D>().enabled = false;
+                DeadBehavior();
+                _isDead = true;
+                return;
+            }
             GetAttackRate();
             if (!HasDetect())
             {
-                hitObject.SetActive(false);
+                NoDetectionBehavior();
                 Move();
                 return;
             }
@@ -37,14 +81,13 @@ namespace Scripts.AI.SuperClass
             {
                 return;
             }
-            Attack(hit);
-            hitObject.SetActive(true);
+            anim.SetTrigger(_attackId);
+            hit.collider.gameObject.GetComponent<StatManager>().GetStatPresenter("Health").DecreaseStat(aiData.damage);
+            AttackBehavior(hit);
             _currentRate = 0f;
-
-
         }
         
-        private bool HasDetect()
+        protected bool HasDetect()
         {
             return hit=Physics2D.Raycast(transform.position, -Vector2.right, detectionRange, detectionMask);
         }
@@ -62,7 +105,9 @@ namespace Scripts.AI.SuperClass
             }
         }
 
-        protected abstract void Attack(RaycastHit2D hit);
+        protected abstract void AttackBehavior(RaycastHit2D hit);
+        protected abstract void DeadBehavior();
+        protected abstract void NoDetectionBehavior();
         
 
         private void OnDrawGizmos()
@@ -78,7 +123,6 @@ namespace Scripts.AI.SuperClass
         public string Name;
         public int speed;
         public int damage;
-        public int health;
         [Tooltip("attack Rate per Minute")]
         public float attackRate;
     }

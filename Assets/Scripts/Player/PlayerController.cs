@@ -5,6 +5,7 @@ namespace Scripts.Player
 {
     public class PlayerController : MonoBehaviour
     {
+        [SerializeField] private FixedJoystick variableJoystick;
         [SerializeField] private float playerSpeed;
         [SerializeField] private Vector2 minMaxXPos;
         [SerializeField] private Vector2 minMaxYPos;
@@ -26,7 +27,10 @@ namespace Scripts.Player
         {
 #if UNITY_EDITOR
             _dir = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")).normalized;
+#elif UNITY_ANDROID
+            _dir = new Vector2(variableJoystick.Horizontal, variableJoystick.Vertical).normalized;
 #endif
+            
         }
 
         private void Movement()

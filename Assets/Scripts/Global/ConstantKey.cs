@@ -6,6 +6,7 @@ namespace Scripts.Global
         public const string EnemyTag = "Enemy";
         public const string BulletTag = "Bullet";
         public const string PlayerMovementAnimatorVariable = "Movement";
+
     }
 }
 
