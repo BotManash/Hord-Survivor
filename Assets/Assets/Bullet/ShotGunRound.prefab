@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 7993617234555056228}
   - component: {fileID: 1735689688689833192}
   - component: {fileID: 8077192292644255470}
+  - component: {fileID: -2139773857947057373}
+  - component: {fileID: 7132989741509928315}
   m_Layer: 0
   m_Name: ShotGunRound
   m_TagString: Untagged
@@ -113,6 +115,31 @@ MonoBehaviour:
     bulletId: 0
     bulletDamage: 10
   rb: {fileID: 1735689688689833192}
+--- !u!114 &-2139773857947057373
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 817555540369683528}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f65badea2bd944e58cd479c0e823a8c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &7132989741509928315
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 817555540369683528}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30d9db925d33451a90d4b68d2a52f1bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delayResetTime: 3
 --- !u!1 &4822468717379381310
 GameObject:
   m_ObjectHideFlags: 0

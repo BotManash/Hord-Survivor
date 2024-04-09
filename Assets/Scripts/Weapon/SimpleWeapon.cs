@@ -1,4 +1,5 @@
 using System;
+using Scripts.ObjectPoolSystem;
 using Scripts.Weapon.Extras;
 using UnityEngine;
 using UnityEngine.Events;
@@ -10,8 +11,8 @@ namespace Scripts.Weapon
         [SerializeField] private WeaponData weaponData;
         [SerializeField] private WeaponDetection weaponDetection;
         [SerializeField] private UnityEvent onBulletFire;
-        [SerializeField] private Bullet bullet;
         [SerializeField] private Transform bulletPoint;
+        [SerializeField] private string bulletName;
 
         private float _currentTime;
 
@@ -57,12 +58,12 @@ namespace Scripts.Weapon
 
         private void Shoot(Action callback,int bulletSpeed)
         {
-            var tempBullet = Instantiate(bullet, bulletPoint);
+            var tempBullet = ObjectPoolHandler.getInstance.GetPoolItem(bulletName);
             tempBullet.transform.position = bulletPoint.position;
             tempBullet.transform.rotation=Quaternion.Euler(Vector2.zero);
             tempBullet.transform.SetParent(null);
             tempBullet.gameObject.SetActive(true);
-            tempBullet.Shoot(bulletSpeed);
+            tempBullet.GetComponent<Bullet>().Shoot(bulletSpeed);
             callback?.Invoke();
         }
 
