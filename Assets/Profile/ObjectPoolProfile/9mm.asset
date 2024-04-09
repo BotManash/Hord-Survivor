@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7593a7cac16c47418b389e7c1591992b, type: 3}
+  m_Name: 9mm
+  m_EditorClassIdentifier: 
+  objectName: 9mm
+  referenceInstanceObject: {fileID: 2200297332921740345, guid: a0281d6748c6bd64290fb4cab2d51408,
+    type: 3}

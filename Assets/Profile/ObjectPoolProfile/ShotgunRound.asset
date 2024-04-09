@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7593a7cac16c47418b389e7c1591992b, type: 3}
+  m_Name: ShotgunRound
+  m_EditorClassIdentifier: 
+  objectName: Slug
+  referenceInstanceObject: {fileID: 817555540369683528, guid: b059ebf98bd7bb043bc83b064b11b3fc,
+    type: 3}

@@ -1,5 +1,6 @@
 ﻿using System;
 using Scripts.Global;
+using Scripts.ObjectPoolSystem;
 using Scripts.StatSystem.SuperClass;
 using UnityEngine;
 
@@ -9,7 +10,10 @@ namespace Scripts.Weapon
     {
         [SerializeField] private BulletData bulletData;
         [SerializeField] private Rigidbody2D rb;
+
+        private PoolObject poolObject => GetComponent<PoolObject>();
         
+
         public void Shoot(int bulletSpeed)
         {
             rb.AddForce(Vector2.right * bulletSpeed);
@@ -23,7 +27,7 @@ namespace Scripts.Weapon
             }
             other.GetComponent<StatManager>().GetStatPresenter("Health").
                 DecreaseStat(bulletData.bulletDamage);
-            Destroy(this.gameObject);
+            poolObject.ResetPoolObject();
         }
     }
 

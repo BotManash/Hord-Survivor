@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 5761304142058910527}
   - component: {fileID: 6154031423433525485}
   - component: {fileID: 1905974787541353761}
+  - component: {fileID: -4204873228248884456}
+  - component: {fileID: 9199536182289914472}
   m_Layer: 0
   m_Name: RiflelRound
   m_TagString: Untagged
@@ -113,6 +115,31 @@ MonoBehaviour:
     bulletId: 0
     bulletDamage: 10
   rb: {fileID: 6154031423433525485}
+--- !u!114 &-4204873228248884456
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2200297332921740345}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f65badea2bd944e58cd479c0e823a8c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &9199536182289914472
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2200297332921740345}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30d9db925d33451a90d4b68d2a52f1bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delayResetTime: 3
 --- !u!1 &5859114899364035622
 GameObject:
   m_ObjectHideFlags: 0

@@ -190,8 +190,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  bullet: {fileID: 7005703575014399493, guid: 704e26d4dc14e1e48895e3ec184a6d5f, type: 3}
   bulletPoint: {fileID: 1460150214}
+  bulletName: LongRange
 --- !u!1001 &84804240
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -464,6 +464,53 @@ Transform:
   - {fileID: 1422122964}
   m_Father: {fileID: 826233847}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &209201489
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 209201490}
+  - component: {fileID: 209201491}
+  m_Layer: 7
+  m_Name: SniperRifleRound
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &209201490
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 209201489}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 822192337}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &209201491
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 209201489}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd868cf3cde29de498ace5f54f6432a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  poolName: LongRange
+  numberOfObjectsToAddInPool: 30
+  poolObjectProfile: {fileID: 11400000, guid: dde4de9e0bf28ce448bdae072c342bad, type: 2}
 --- !u!1 &268420232
 GameObject:
   m_ObjectHideFlags: 0
@@ -682,6 +729,50 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 277454566}
   m_CullTransparentMesh: 1
+--- !u!1 &296951336
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 296951337}
+  - component: {fileID: 296951338}
+  m_Layer: 0
+  m_Name: OpjectPoolHandler
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &296951337
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 296951336}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 705003692}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &296951338
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 296951336}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fc3f2c451e94cffaa8351b5f680c20c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &314801137
 GameObject:
   m_ObjectHideFlags: 0
@@ -1718,6 +1809,53 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 407825127}
   m_CullTransparentMesh: 1
+--- !u!1 &433922539
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 433922540}
+  - component: {fileID: 433922541}
+  m_Layer: 7
+  m_Name: RPGRound
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &433922540
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 433922539}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 822192337}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &433922541
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 433922539}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd868cf3cde29de498ace5f54f6432a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  poolName: RPG
+  numberOfObjectsToAddInPool: 30
+  poolObjectProfile: {fileID: 11400000, guid: b865a25523ac9b9478fa6888d65da7ef, type: 2}
 --- !u!1 &459964866
 GameObject:
   m_ObjectHideFlags: 0
@@ -2927,6 +3065,7 @@ Transform:
   - {fileID: 697036555}
   - {fileID: 850001538}
   - {fileID: 822192337}
+  - {fileID: 296951337}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &721672592
@@ -3119,6 +3258,10 @@ Transform:
   - {fileID: 362634185}
   - {fileID: 1526516780}
   - {fileID: 2122353096}
+  - {fileID: 1147471747}
+  - {fileID: 433922540}
+  - {fileID: 1298195165}
+  - {fileID: 209201490}
   m_Father: {fileID: 705003692}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &822192338
@@ -3547,8 +3690,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  bullet: {fileID: 1905974787541353761, guid: a0281d6748c6bd64290fb4cab2d51408, type: 3}
   bulletPoint: {fileID: 665168544}
+  bulletName: 9mm
 --- !u!1 &979305958
 GameObject:
   m_ObjectHideFlags: 0
@@ -3990,6 +4133,53 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1084367867}
   m_CullTransparentMesh: 1
+--- !u!1 &1147471746
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1147471747}
+  - component: {fileID: 1147471748}
+  m_Layer: 7
+  m_Name: 9MMRound
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1147471747
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1147471746}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 822192337}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1147471748
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1147471746}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd868cf3cde29de498ace5f54f6432a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  poolName: 9mm
+  numberOfObjectsToAddInPool: 30
+  poolObjectProfile: {fileID: 11400000, guid: 93d173c992b361842a519142d5f9c295, type: 2}
 --- !u!1 &1150798127
 GameObject:
   m_ObjectHideFlags: 0
@@ -4479,6 +4669,53 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1284518251}
   m_CullTransparentMesh: 1
+--- !u!1 &1298195164
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1298195165}
+  - component: {fileID: 1298195166}
+  m_Layer: 7
+  m_Name: ShotgunRound
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1298195165
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1298195164}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 822192337}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1298195166
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1298195164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd868cf3cde29de498ace5f54f6432a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  poolName: Slug
+  numberOfObjectsToAddInPool: 30
+  poolObjectProfile: {fileID: 11400000, guid: f38fbc73cffd929488dbab6437e44d01, type: 2}
 --- !u!1 &1334053324
 GameObject:
   m_ObjectHideFlags: 0
@@ -5334,8 +5571,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  bullet: {fileID: 8077192292644255470, guid: b059ebf98bd7bb043bc83b064b11b3fc, type: 3}
   bulletPoint: {fileID: 1901186875}
+  bulletName: Slug
 --- !u!1001 &1734953040
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6542,8 +6779,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  bullet: {fileID: 1905974787541353761, guid: ab6cb9c8f7f464541ab5f827c34bcd46, type: 3}
   bulletPoint: {fileID: 1199206362}
+  bulletName: RPG
 --- !u!1001 &2082397434
 PrefabInstance:
   m_ObjectHideFlags: 0
