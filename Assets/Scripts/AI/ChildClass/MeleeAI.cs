@@ -18,7 +18,8 @@ namespace Scripts.AI.ChildClass
         protected override void DeadBehavior()
         {
             hitObject.SetActive(false);
-            Invoke(nameof(OnDead),1f);
+            deadParticle.SetActive(true);
+            Invoke(nameof(OnDead),3f);
         }
 
         protected override void NoDetectionBehavior()
@@ -30,6 +31,11 @@ namespace Scripts.AI.ChildClass
         {
             this.gameObject.SetActive(false);
         }
+    }
+
+    public interface IDamage
+    {
+        public void GetDamage(int damage);
     }
 }
 

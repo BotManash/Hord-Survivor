@@ -1,4 +1,5 @@
 using System;
+using Scripts.GameSoundSystem;
 using Scripts.ObjectPoolSystem;
 using Scripts.Weapon.Extras;
 using UnityEngine;
@@ -13,6 +14,7 @@ namespace Scripts.Weapon
         [SerializeField] private UnityEvent onBulletFire;
         [SerializeField] private Transform bulletPoint;
         [SerializeField] private string bulletName;
+        [SerializeField] private AudioClip fireSound;
 
         private float _currentTime;
 
@@ -43,6 +45,7 @@ namespace Scripts.Weapon
             Shoot(() =>
             {
                 onBulletFire?.Invoke();
+                GameSoundHandler.getInstance.PlaySound(fireSound);
             },weaponData.bulletSpeed);
             
             _currentTime = 0;

@@ -1,4 +1,5 @@
 ﻿using System;
+using Scripts.AI.ChildClass;
 using Scripts.Global;
 using Scripts.ObjectPoolSystem;
 using Scripts.StatSystem.SuperClass;
@@ -25,8 +26,11 @@ namespace Scripts.Weapon
             {
                 return;
             }
-            other.GetComponent<StatManager>().GetStatPresenter("Health").
-                DecreaseStat(bulletData.bulletDamage);
+
+            if (other.TryGetComponent(out IDamage damage))
+            {
+                damage.GetDamage(bulletData.bulletDamage);
+            }
             poolObject.ResetPoolObject();
         }
     }

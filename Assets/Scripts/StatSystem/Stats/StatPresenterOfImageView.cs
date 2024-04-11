@@ -1,7 +1,6 @@
 ﻿using System.Globalization;
 using Scripts.StatSystem.SuperClass;
 using UnityEngine;
-using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 namespace Script.StatSystem.Stats
@@ -12,14 +11,11 @@ namespace Script.StatSystem.Stats
         
         protected override void SingleCallUpdateView()
         {
-           
+            statImageIconSlider.fillAmount = statModel.pCurrentStat / statModel.pMaxStat;
         }
 
         protected override void LoopCallUpdateView()
         {
-            var currentFillAmount = statImageIconSlider.fillAmount;
-            statImageIconSlider.fillAmount = Mathf.Lerp(currentFillAmount,
-                statModel.pCurrentStat / statModel.pMaxStat, Time.fixedDeltaTime*5f);
         }
     }
 }
