@@ -1,11 +1,13 @@
 using System;
 using System.Collections;
+using Scripts.AI.ChildClass;
+using Scripts.ObjectPoolSystem;
 using Scripts.StatSystem.SuperClass;
 using UnityEngine;
 
 namespace Scripts.AI.SuperClass
 {
-    public abstract class SimpleAI : MonoBehaviour
+    public abstract class SimpleAI : MonoBehaviour,IDamage
     {
         [SerializeField] protected AIProfile aiData;
         [SerializeField] protected Animator anim;
@@ -21,6 +23,10 @@ namespace Scripts.AI.SuperClass
         private readonly int _attackId = Animator.StringToHash("Attack");
 
         [SerializeField] protected StatManager statManager;
+
+        [SerializeField] protected GameObject deadParticle;
+        
+        
         private RaycastHit2D hit { get; set; }
 
         private float _currentRate=0f;
@@ -47,6 +53,7 @@ namespace Scripts.AI.SuperClass
                 StopCoroutine(_cBehaviourRoutine);
                 _cBehaviourRoutine = null;
             }
+            deadParticle.SetActive(false);
         }
 
         private IEnumerator ERunBehavior()
@@ -114,6 +121,18 @@ namespace Scripts.AI.SuperClass
         {
             Gizmos.color = Color.red;
             Gizmos.DrawRay(detectionPoint.transform.position, Vector2.left * detectionRange);
+        }
+
+        public void GetDamage(int damage)
+        {
+            statManager.GetStatPresenter("Health").
+                DecreaseStat(damage);
+            var hitParticle = ObjectPoolHandler.getInstance.GetPoolItem("Hit");
+            var myTransform = this.transform;
+            hitParticle.transform.SetParent(myTransform);
+            hitParticle.transform.position = myTransform.position;
+            hitParticle.transform.rotation=Quaternion.Euler(Vector2.zero);
+            hitParticle.SetActive(true);
         }
     }
 
